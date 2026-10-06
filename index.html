@@ -1,0 +1,906 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anisa Eka Hapsari</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        serif: ['DM Serif Display', 'serif']
+                    },
+
+                    colors: {
+                        cream: '#fffaf7',
+                        rose: '#d98b9b',
+                        darkrose: '#a85d6e'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .blob {
+            animation: floating 6s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+        }
+
+        .fade-up {
+            animation: fadeUp 1s ease forwards;
+        }
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        .glass {
+            background: rgba(255,255,255,0.65);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
+
+    </style>
+
+</head>
+
+
+<body class="bg-cream text-gray-800">
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<nav class="fixed top-0 left-0 w-full z-50">
+
+    <div class="max-w-5xl mx-auto px-5 py-4">
+
+        <div
+            class="glass rounded-full border border-white/70 shadow-sm px-5 py-3 flex items-center justify-between"
+        >
+
+            <a
+                href="#"
+                class="font-serif text-xl text-darkrose"
+            >
+                Anisa.
+            </a>
+
+
+            <div class="hidden sm:flex items-center gap-6 text-sm">
+
+                <a
+                    href="#about"
+                    class="hover:text-darkrose transition"
+                >
+                    Tentang
+                </a>
+
+                <a
+                    href="#skills"
+                    class="hover:text-darkrose transition"
+                >
+                    Skill
+                </a>
+
+                <a
+                    href="#hobby"
+                    class="hover:text-darkrose transition"
+                >
+                    Hobi
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section
+    class="min-h-screen flex items-center justify-center relative overflow-hidden px-5 pt-24"
+>
+
+
+    <!-- Background decoration -->
+
+    <div
+        class="absolute w-72 h-72 bg-pink-200/40 rounded-full blur-3xl -top-10 -left-20"
+    ></div>
+
+
+    <div
+        class="absolute w-80 h-80 bg-rose-200/30 rounded-full blur-3xl bottom-0 -right-20"
+    ></div>
+
+
+
+    <div
+        class="max-w-3xl mx-auto text-center relative z-10 fade-up"
+    >
+
+
+        <!-- FOTO PROFIL -->
+
+        <div class="relative inline-block mb-7">
+
+            <div
+                class="absolute inset-0 bg-rose-300 rounded-full blur-xl opacity-30 scale-110"
+            ></div>
+
+
+            <img
+                src="assets/WhatsApp Image 2026-10-06 at 23.17.48.jpeg"
+                alt="Foto Anisa Eka Hapsari"
+                class="relative w-40 h-40 sm:w-48 sm:h-48 object-cover rounded-full border-8 border-white shadow-xl mx-auto"
+            >
+
+        </div>
+
+
+
+        <p
+            class="text-sm uppercase tracking-[0.3em] text-darkrose mb-4"
+        >
+            Welcome to my little space
+        </p>
+
+
+
+        <h1
+            class="font-serif text-5xl sm:text-7xl text-gray-900 leading-tight"
+        >
+            Anisa Eka Hapsari
+        </h1>
+
+
+
+        <p class="mt-5 text-gray-500 text-base sm:text-lg">
+
+            Mahasiswa
+
+            <span class="text-darkrose font-medium">
+                PGSD
+            </span>
+
+            · Universitas Terbuka
+
+        </p>
+
+
+
+        <p
+            class="max-w-xl mx-auto mt-6 text-gray-500 leading-relaxed"
+        >
+
+            Belajar, berkembang, dan terus menemukan
+            hal-hal yang membuat hidup menjadi lebih bermakna.
+
+        </p>
+
+
+
+        
+
+
+    </div>
+
+
+
+    <!-- Decorative -->
+
+    <div class="blob absolute top-1/4 right-[8%] hidden lg:block">
+
+        <div class="w-5 h-5 rounded-full bg-rose-300"></div>
+
+    </div>
+
+
+    <div class="blob absolute bottom-1/4 left-[10%] hidden lg:block">
+
+        <div class="w-3 h-3 rounded-full bg-pink-300"></div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section
+    id="about"
+    class="py-24 px-5"
+>
+
+    <div class="max-w-4xl mx-auto">
+
+
+        <div class="text-center mb-12">
+
+            <p
+                class="text-sm uppercase tracking-[0.25em] text-darkrose mb-3"
+            >
+                About Me
+            </p>
+
+
+            <h2
+                class="font-serif text-4xl sm:text-5xl text-gray-900"
+            >
+                Sedikit Tentang Saya
+            </h2>
+
+        </div>
+
+
+
+        <div
+            class="bg-white rounded-3xl p-7 sm:p-10 shadow-sm border border-rose-100"
+        >
+
+            <p
+                class="text-gray-600 leading-8 text-center max-w-2xl mx-auto"
+            >
+
+                Halo, saya
+
+                <strong class="text-darkrose">
+                    Anisa Eka Hapsari
+                </strong>.
+
+                Saya merupakan mahasiswa Program Studi
+                Pendidikan Guru Sekolah Dasar (PGSD)
+                di Universitas Terbuka.
+
+            </p>
+
+
+            <p
+                class="text-gray-600 leading-8 text-center max-w-2xl mx-auto mt-5"
+            >
+
+                Saya adalah seseorang yang senang belajar,
+                mencoba berbagai hal baru, dan menikmati
+                aktivitas sederhana yang membuat kehidupan
+                terasa lebih menyenangkan.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EDUCATION
+========================================================= -->
+
+<section
+    class="py-20 px-5 bg-white"
+>
+
+    <div class="max-w-4xl mx-auto">
+
+
+        <div class="text-center mb-12">
+
+            <p
+                class="text-sm uppercase tracking-[0.25em] text-darkrose mb-3"
+            >
+                Education
+            </p>
+
+
+            <h2
+                class="font-serif text-4xl sm:text-5xl text-gray-900"
+            >
+                Pendidikan
+            </h2>
+
+        </div>
+
+
+
+        <div class="max-w-xl mx-auto">
+
+            <div class="flex gap-5 items-start">
+
+
+                <div
+                    class="w-14 h-14 shrink-0 rounded-2xl bg-rose-100 flex items-center justify-center text-2xl"
+                >
+                    🎓
+                </div>
+
+
+
+                <div>
+
+                    <h3
+                        class="font-semibold text-xl text-gray-900"
+                    >
+                        Universitas Terbuka
+                    </h3>
+
+
+                    <p
+                        class="text-darkrose mt-1 font-medium"
+                    >
+                        Pendidikan Guru Sekolah Dasar
+                    </p>
+
+
+                    <p
+                        class="text-gray-500 mt-2 text-sm"
+                    >
+                        Program Studi PGSD
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SKILLS
+========================================================= -->
+
+<section
+    id="skills"
+    class="py-24 px-5"
+>
+
+    <div class="max-w-5xl mx-auto">
+
+
+        <div class="text-center mb-12">
+
+            <p
+                class="text-sm uppercase tracking-[0.25em] text-darkrose mb-3"
+            >
+                What I Can Do
+            </p>
+
+
+            <h2
+                class="font-serif text-4xl sm:text-5xl text-gray-900"
+            >
+                Skill Saya
+            </h2>
+
+
+            <p class="text-gray-500 mt-4 max-w-xl mx-auto">
+                Beberapa kemampuan dan hal yang saya sukai
+                untuk saya lakukan dalam kehidupan sehari-hari.
+            </p>
+
+        </div>
+
+
+
+        <div
+            class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"
+        >
+
+
+            <!-- Skill 1 -->
+
+            <div
+                class="bg-white rounded-2xl p-5 border border-rose-100 shadow-sm hover:-translate-y-2 transition duration-300"
+            >
+
+                <div class="text-3xl mb-4">
+                    🎯
+                </div>
+
+                <h3 class="font-semibold text-gray-900">
+                    Disiplin
+                </h3>
+
+                <p class="text-xs text-gray-400 mt-2">
+                    Konsisten dalam menjalankan tugas.
+                </p>
+
+            </div>
+
+
+
+            <!-- Skill 2 -->
+
+            <div
+                class="bg-white rounded-2xl p-5 border border-rose-100 shadow-sm hover:-translate-y-2 transition duration-300"
+            >
+
+                <div class="text-3xl mb-4">
+                    🤝
+                </div>
+
+                <h3 class="font-semibold text-gray-900">
+                    Bertanggung Jawab
+                </h3>
+
+                <p class="text-xs text-gray-400 mt-2">
+                    Menyelesaikan tanggung jawab dengan baik.
+                </p>
+
+            </div>
+
+
+
+            <!-- Skill 3 -->
+
+            <div
+                class="bg-white rounded-2xl p-5 border border-rose-100 shadow-sm hover:-translate-y-2 transition duration-300"
+            >
+
+                <div class="text-3xl mb-4">
+                    🔍
+                </div>
+
+                <h3 class="font-semibold text-gray-900">
+                    Teliti
+                </h3>
+
+                <p class="text-xs text-gray-400 mt-2">
+                    Memperhatikan detail dalam pekerjaan.
+                </p>
+
+            </div>
+
+
+
+            <!-- Skill 4 -->
+
+            <div
+                class="bg-white rounded-2xl p-5 border border-rose-100 shadow-sm hover:-translate-y-2 transition duration-300"
+            >
+
+                <div class="text-3xl mb-4">
+                    ⏰
+                </div>
+
+                <h3 class="font-semibold text-gray-900">
+                    Mengatur Waktu
+                </h3>
+
+                <p class="text-xs text-gray-400 mt-2">
+                    Mengatur waktu dan prioritas dengan baik.
+                </p>
+
+            </div>
+
+
+
+            <!-- Skill 5 -->
+
+            <div
+                class="bg-white rounded-2xl p-5 border border-rose-100 shadow-sm hover:-translate-y-2 transition duration-300"
+            >
+
+                <div class="text-3xl mb-4">
+                    🎬
+                </div>
+
+                <h3 class="font-semibold text-gray-900">
+                    Edit Foto & Video
+                </h3>
+
+                <p class="text-xs text-gray-400 mt-2">
+                    Mengedit foto dan video untuk berbagai kebutuhan.
+                </p>
+
+            </div>
+
+
+
+            <!-- Skill 6 -->
+
+            <div
+                class="bg-white rounded-2xl p-5 border border-rose-100 shadow-sm hover:-translate-y-2 transition duration-300"
+            >
+
+                <div class="text-3xl mb-4">
+                    🏠
+                </div>
+
+                <h3 class="font-semibold text-gray-900">
+                    Merapikan Rumah
+                </h3>
+
+                <p class="text-xs text-gray-400 mt-2">
+                    Menjaga kerapian dan kenyamanan rumah.
+                </p>
+
+            </div>
+
+
+
+            <!-- Skill 7 -->
+
+            <div
+                class="bg-white rounded-2xl p-5 border border-rose-100 shadow-sm hover:-translate-y-2 transition duration-300"
+            >
+
+                <div class="text-3xl mb-4">
+                    💰
+                </div>
+
+                <h3 class="font-semibold text-gray-900">
+                    Mengatur Keuangan
+                </h3>
+
+                <p class="text-xs text-gray-400 mt-2">
+                    Mengelola pemasukan dan pengeluaran.
+                </p>
+
+            </div>
+
+
+
+            <!-- Skill 8 -->
+
+            <div
+                class="bg-white rounded-2xl p-5 border border-rose-100 shadow-sm hover:-translate-y-2 transition duration-300"
+            >
+
+                <div class="text-3xl mb-4">
+                    📱
+                </div>
+
+                <h3 class="font-semibold text-gray-900">
+                    Membuat Konten
+                </h3>
+
+                <p class="text-xs text-gray-400 mt-2">
+                    Membuat konten kreatif dan menarik.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     HOBBY
+========================================================= -->
+
+<section
+    id="hobby"
+    class="py-24 px-5 bg-white"
+>
+
+    <div class="max-w-5xl mx-auto">
+
+
+        <div class="text-center mb-12">
+
+            <p
+                class="text-sm uppercase tracking-[0.25em] text-darkrose mb-3"
+            >
+                Things I Love
+            </p>
+
+
+            <h2
+                class="font-serif text-4xl sm:text-5xl text-gray-900"
+            >
+                Hobi & Hal yang Saya Sukai
+            </h2>
+
+        </div>
+
+
+
+        <div
+            class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4"
+        >
+
+
+            <!-- Hobby 1 -->
+
+            <div
+                class="group bg-rose-50 rounded-2xl p-6 text-center border border-rose-100 hover:bg-darkrose hover:text-white transition duration-300"
+            >
+
+                <div class="text-4xl mb-4">
+                    🎧
+                </div>
+
+                <h3 class="font-medium">
+                    Mendengarkan Musik
+                </h3>
+
+            </div>
+
+
+
+            <!-- Hobby 2 -->
+
+            <div
+                class="group bg-rose-50 rounded-2xl p-6 text-center border border-rose-100 hover:bg-darkrose hover:text-white transition duration-300"
+            >
+
+                <div class="text-4xl mb-4">
+                    🎬
+                </div>
+
+                <h3 class="font-medium">
+                    Menonton Film
+                </h3>
+
+            </div>
+
+
+
+            <!-- Hobby 3 -->
+
+            <div
+                class="group bg-rose-50 rounded-2xl p-6 text-center border border-rose-100 hover:bg-darkrose hover:text-white transition duration-300"
+            >
+
+                <div class="text-4xl mb-4">
+                    📱
+                </div>
+
+                <h3 class="font-medium">
+                    Bermain Medsos
+                </h3>
+
+            </div>
+
+
+
+            <!-- Hobby 4 -->
+
+            <div
+                class="group bg-rose-50 rounded-2xl p-6 text-center border border-rose-100 hover:bg-darkrose hover:text-white transition duration-300"
+            >
+
+                <div class="text-4xl mb-4">
+                    🐾
+                </div>
+
+                <h3 class="font-medium">
+                    Bermain dengan Hewan Peliharaan
+                </h3>
+
+            </div>
+
+
+
+            <!-- Hobby 5 -->
+
+            <div
+                class="group bg-rose-50 rounded-2xl p-6 text-center border border-rose-100 hover:bg-darkrose hover:text-white transition duration-300"
+            >
+
+                <div class="text-4xl mb-4">
+                    😴
+                </div>
+
+                <h3 class="font-medium">
+                    Tidur
+                </h3>
+
+            </div>
+
+
+
+            <!-- Hobby 6 -->
+
+            <div
+                class="group bg-rose-50 rounded-2xl p-6 text-center border border-rose-100 hover:bg-darkrose hover:text-white transition duration-300"
+            >
+
+                <div class="text-4xl mb-4">
+                    ☕
+                </div>
+
+                <h3 class="font-medium">
+                    Nongkrong
+                </h3>
+
+            </div>
+
+
+
+            <!-- Hobby 7 -->
+
+            <div
+                class="group bg-rose-50 rounded-2xl p-6 text-center border border-rose-100 hover:bg-darkrose hover:text-white transition duration-300"
+            >
+
+                <div class="text-4xl mb-4">
+                    🚶‍♀️
+                </div>
+
+                <h3 class="font-medium">
+                    Jalan-jalan
+                </h3>
+
+            </div>
+
+
+
+            <!-- Hobby 8 -->
+
+            <div
+                class="group bg-rose-50 rounded-2xl p-6 text-center border border-rose-100 hover:bg-darkrose hover:text-white transition duration-300"
+            >
+
+                <div class="text-4xl mb-4">
+                    📸
+                </div>
+
+                <h3 class="font-medium">
+                    Mengabadikan Momen
+                </h3>
+
+            </div>
+
+
+
+            <!-- Hobby 9 -->
+
+            <div
+                class="group bg-rose-50 rounded-2xl p-6 text-center border border-rose-100 hover:bg-darkrose hover:text-white transition duration-300"
+            >
+
+                <div class="text-4xl mb-4">
+                    🍳
+                </div>
+
+                <h3 class="font-medium">
+                    Masak
+                </h3>
+
+            </div>
+
+
+
+            <!-- Hobby 10 -->
+
+            <div
+                class="group bg-rose-50 rounded-2xl p-6 text-center border border-rose-100 hover:bg-darkrose hover:text-white transition duration-300"
+            >
+
+                <div class="text-4xl mb-4">
+                    🛍️
+                </div>
+
+                <h3 class="font-medium">
+                    Belanja
+                </h3>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     QUOTE
+========================================================= -->
+
+<section class="py-28 px-5">
+
+    <div class="max-w-3xl mx-auto text-center">
+
+        <div class="text-5xl text-rose-300 font-serif">
+            “
+        </div>
+
+
+        <p
+            class="font-serif text-3xl sm:text-4xl text-gray-800 leading-relaxed mt-3"
+        >
+
+            Terus belajar, terus bertumbuh,
+            dan nikmati setiap prosesnya.
+
+        </p>
+
+
+        <div
+            class="w-12 h-px bg-rose-300 mx-auto mt-8"
+        ></div>
+
+
+        <p class="text-sm text-gray-400 mt-5">
+            Anisa Eka Hapsari
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+</body>
+</html>
+
